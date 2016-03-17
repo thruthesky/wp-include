@@ -9,3 +9,4 @@ define('__WP_INCLUDE__', TRUE);
 include "function.php";
 include "class.php";
 include "shortcode.php";
+include "hook.php";

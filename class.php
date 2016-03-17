@@ -18,7 +18,7 @@ class WP_INCLUDE_USER {
         get_currentuserinfo();
         return $current_user->user_login;
     }
-    public function username() { echo $this->get_username(); }
+    public function username() { echo $this->getUsername(); }
 }
 
 /**

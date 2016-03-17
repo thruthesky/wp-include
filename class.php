@@ -7,9 +7,18 @@
  * Class WP_INCLUDE_USER
  */
 class WP_INCLUDE_USER {
-    public function username() {
-        echo "jaeho song";
+
+    /**
+     * Returns / Echoes username.
+     * user()->username();
+     * @return string
+     */
+    public function get_username() {
+        global $current_user;
+        get_currentuserinfo();
+        return $current_user->user_login;
     }
+    public function username() { echo $this->get_username(); }
 }
 
 /**

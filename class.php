@@ -13,7 +13,7 @@ class WP_INCLUDE_USER {
      * user()->username();
      * @return string
      */
-    public function get_username() {
+    public function getUsername() {
         global $current_user;
         get_currentuserinfo();
         return $current_user->user_login;

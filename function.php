@@ -41,3 +41,33 @@ function get_logout_url() {
     is_home() ? $logout_url = get_bloginfo('home') : $logout_url = get_permalink();
     return wp_logout_url($logout_url);
 }
+
+
+function option($storage, $name, $escape = true) {
+    $options = get_option($storage);
+    if ( $escape ) $re = esc_attr( $options[$name] );
+    else $re = $options[$name];
+    echo $re;
+}
+
+/**
+ * @return string - theme directory uri
+ */
+function td() {
+    return get_template_directory_uri();
+}
+
+/**
+ * @note it ECHOes image directory uri including ending slash.
+ */
+function id() {
+    echo td() . '/img/';
+}
+
+/**
+ * Echoes home page directory uri including slash.
+ */
+function hd() {
+    echo esc_url( home_url( '/' ) );
+}
+

@@ -27,3 +27,4 @@ class WP_INCLUDE_USER {
 function user() {
     return new WP_INCLUDE_USER();
 }
+
